@@ -5,5 +5,17 @@
   "main": "index.js",
   "repository": "git@github.com:Platform-Builders/builders-helpers.git",
   "author": "Platform-Builders",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "numeral": "^2.0.6",
+    "react-native": "^0.61.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/moment": "^2.13.0",
+    "@types/numeral": "^0.0.26",
+    "@types/react-native": "^0.61.16"
+  }
 }
