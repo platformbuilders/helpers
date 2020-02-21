@@ -1,0 +1,9 @@
+{
+  "name": "builders-helpers",
+  "version": "1.0.0",
+  "description": "Platfom builders helpers library",
+  "main": "index.js",
+  "repository": "git@github.com:Platform-Builders/builders-helpers.git",
+  "author": "Platform-Builders",
+  "license": "MIT"
+}
