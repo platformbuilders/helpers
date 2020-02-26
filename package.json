@@ -4,11 +4,36 @@
   "description": "Platfom builders helpers library",
   "main": "index.js",
   "repository": "git@github.com:Platform-Builders/builders-helpers.git",
-  "author": "Platform-Builders",
+  "author": "platformbuilders",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "yarn lint",
+      "yarn test",
+      "yarn jest:coverage",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
     "test": "jest --verbose",
-    "jest:coverage": "jest --coverage"
+    "jest:coverage": "jest --coverage",
+    "lint": "tsc && eslint '*/**/*.{js,ts,tsx}' --fix",
+    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
+    "clean": "rm -rf ./node_modules && yarn install",
+    "precommit": "yarn lint",
+    "preversion": "yarn lint",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
   },
   "dependencies": {
     "lodash": "^4.17.15",
@@ -30,6 +55,7 @@
     "babel-preset-react-native": "^4.0.1",
     "jest": "^25.1.0",
     "jest-environment-node": "^25.1.0",
+    "prettier": "^1.19.1",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.2"
   }
