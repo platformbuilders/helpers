@@ -1,27 +1,16 @@
-# Welcome to Builders UI
+# Welcome to Builders Helpers
 
-Welcome to the builder ui package here you will find out all of our components shared with the community
+Welcome to the builder helpers package here you will find out all the helpers that we use on our projects
 
 <img src="https://pbs.twimg.com/profile_images/1093878457807847425/3oSyUp1U_400x400.jpg">
 
 # Whats the idea of this repository
 
-Its a place that we can share a little bit of our code base and show how we work on our projects with our components!
+Its a place that we can share a little bit of our code base and show how we work on our projects with our helpers
 
 # How can i use the library?
 
-Now it's under development and we will release it soon!
-
-You will need to install some native dependencies that we use on the code:
-
-```
-yarn add react-native-camera react-native-vector-icons react-native-haptic react-native-image-picker react-native-svg react-native-fast-image && cd ios && pod install
-```
-
-Here's how you add our dependencie to your project builders-ui
-1. Add all the native dependencies listed above
-2. Add our library to your project `yarn add builders-ui`
-3. You can use it on your projects
+Just add the library to your project and import it!
 
 # Contributors:
 
