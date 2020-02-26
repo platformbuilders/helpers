@@ -10,6 +10,10 @@ const metrics: any = {
 };
 
 describe('string formatter tests', () => {
+  it('should format currency properly if value is not there', () => {
+    const parsed = currencyParser('');
+    expect(parsed).toBe('R$ 0,00');
+  });
   it('should format currency properly', () => {
     const parsed = currencyParser('100');
     expect(parsed).toBe('R$ 100,00');
@@ -28,5 +32,9 @@ describe('string formatter tests', () => {
   it('should parse to thousands', () => {
     const parsed = parseToThousands('1000', metrics);
     expect(parsed).toBe('1.000');
+  });
+  it('should parse to thousands if value is not there', () => {
+    const parsed = parseToThousands('', metrics);
+    expect(parsed).toBe('0');
   });
 });
