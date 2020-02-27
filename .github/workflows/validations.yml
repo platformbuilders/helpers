@@ -1,0 +1,21 @@
+name: Code Validations
+
+on: pull_request
+
+jobs:
+  checking:
+    name: Code Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: yarn install
+      - name: TypeScript Check
+        run: tsc
+      - name: Lint Check
+        run: yarn lint
+      - name: Runs Jest
+        run: yarn test
+      - name: Runs Jest Coverage Check
+        run: yarn jest:coverage
