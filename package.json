@@ -2,12 +2,24 @@
   "name": "@platformbuilders/helpers",
   "version": "0.0.1",
   "description": "Platfom builders helpers library",
-  "main": "index.js",
+  "main": "src/index.ts",
   "repository": "git@github.com:platformbuilders/helpers.git",
   "author": "platformbuilders",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "jest:coverage": "jest --coverage",
+    "lint": "tsc && eslint '*/**/*.{js,ts,tsx}' --fix",
+    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
+    "clean": "rm -rf ./node_modules && yarn install",
+    "precommit": "yarn lint",
+    "preversion": "yarn lint",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
   },
   "lint-staged": {
     "*.js": [
@@ -23,23 +35,10 @@
       "pre-commit": "lint-staged"
     }
   },
-  "scripts": {
-    "test": "jest --verbose",
-    "jest:coverage": "jest --coverage",
-    "lint": "tsc && eslint '*/**/*.{js,ts,tsx}' --fix",
-    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
-    "clean": "rm -rf ./node_modules && yarn install",
-    "precommit": "yarn lint",
-    "preversion": "yarn lint",
-    "version:patch": "npm version patch",
-    "version:minor": "npm version minor",
-    "version:major": "npm version major"
-  },
   "dependencies": {
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "numeral": "^2.0.6",
-    "react-native": "^0.61.5"
+    "numeral": "^2.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -59,6 +58,22 @@
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "ts-jest": "^25.2.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-react-native": "^3.8.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "typescript": "^3.8.2"
   }
 }

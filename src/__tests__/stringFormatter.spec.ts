@@ -5,10 +5,6 @@ import {
   removeWhiteSpaces,
 } from '../stringFormatter';
 
-const metrics: any = {
-  screenWidth: 375,
-};
-
 describe('string formatter tests', () => {
   it('should format currency properly if value is not there', () => {
     const parsed = currencyParser('');
@@ -30,11 +26,11 @@ describe('string formatter tests', () => {
   });
 
   it('should parse to thousands', () => {
-    const parsed = parseToThousands('1000', metrics);
+    const parsed = parseToThousands('1000');
     expect(parsed).toBe('1.000');
   });
   it('should parse to thousands if value is not there', () => {
-    const parsed = parseToThousands('', metrics);
+    const parsed = parseToThousands('');
     expect(parsed).toBe('0');
   });
 });

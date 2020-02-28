@@ -1,5 +1,4 @@
 import Numeral from 'numeral';
-import { Metrics } from '../@types/metrics';
 
 export const currencyParser = (
   value: string,
@@ -17,13 +16,13 @@ export const currencyParser = (
   return `R$ ${withDecimalValue}`;
 };
 
-export const parseToThousands = (value: string, metrics: Metrics): string => {
+export const parseToThousands = (value: string): string => {
   if (!value) {
     return '0';
   }
 
   return Numeral(value)
-    .format(metrics.screenWidth <= 320 ? '0a' : '0,0')
+    .format('0,0')
     .replace(',', '.');
 };
 

@@ -1,5 +1,5 @@
-import setStyleIOS from '../setStyleIOS';
 import { Platform } from 'react-native';
+import setStyleIOS from '../setStyleIOS';
 
 describe('set style iOS should return stuyle for iOS', () => {
   it('should set style for iOS Platform', () => {

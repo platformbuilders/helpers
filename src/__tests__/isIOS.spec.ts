@@ -1,5 +1,5 @@
-import { isIOS } from '../isIOS';
 import { Platform } from 'react-native';
+import { isIOS } from '../isIOS';
 
 describe('is iOS tests', () => {
   it('should return true', () => {
