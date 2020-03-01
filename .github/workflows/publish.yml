@@ -19,7 +19,7 @@ jobs:
       - name: Create .npmrc
         run: |
           echo "@platformbuilders:registry=https://npm.pkg.github.com
-          //npm.pkg.github.com/:_authToken=teste" > ~/.npmrc
+          //npm.pkg.github.com/:_authToken=${{ secrets.GPR_ACCESS_TOKEN }}" > ~/.npmrc
       - name: Publish
         run: npm publish
 
