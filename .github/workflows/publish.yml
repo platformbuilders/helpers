@@ -19,8 +19,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Install
         run: yarn install
-      - name: Bundle
-        run: tsc
       - name: Publish
         run: npm publish
         env:
