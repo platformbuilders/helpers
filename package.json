@@ -17,7 +17,6 @@
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "clean": "rm -rf ./node_modules && yarn install",
     "precommit": "yarn lint",
-    "preversion": "yarn lint",
     "prepublish": "tsc",
     "postversion": "git push && git push --tags",
     "version:patch": "npm version patch",
