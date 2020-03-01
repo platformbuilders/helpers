@@ -4,26 +4,7 @@ on:
   release:
     types: [published]
 
-jobs:
-  publish_github:
-    runs-on: ubuntu-latest
-    name: Publish to Github Packages
-    steps:
-      - uses: actions/checkout@master
-      - uses: borales/actions-yarn@v2.1.0
-        with:
-          auth-token: ${{ secrets.GPR_ACCESS_TOKEN }}
-          registry-url: 'https://npm.pkg.github.com'
-          scope: platfombuilders
-          cmd: version
-      - name: Create .npmrc
-        run: |
-          echo "@platformbuilders:registry=https://npm.pkg.github.com
-          //npm.pkg.github.com/:_authToken=${{ secrets.GPR_ACCESS_TOKEN }}" > ~/.npmrc
-      - name: Publish
-        run: npm publish
-
-  publish_npm:
+  publish:
     runs-on: ubuntu-latest
 
     name: Publish to npm

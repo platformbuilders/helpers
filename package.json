@@ -13,6 +13,7 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "clean": "rm -rf ./node_modules && yarn install",
+    "prepublish": "tsc",
     "precommit": "yarn lint",
     "postversion": "git push && git push --tags",
     "version:patch": "npm version patch",
