@@ -16,8 +16,11 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: platfombuilders
           cmd: version
+      - name: Create .npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GPR_ACCESS_TOKEN }}" > ~/.npmrc
       - name: Publish
-        run: yarn publish --new-version ${{ github.event.release.tag_name }}
+        run: npm publish
 
   publish_npm:
     runs-on: ubuntu-latest
@@ -32,6 +35,6 @@ jobs:
           node-version: 13
           registry-url: https://registry.npmjs.org/
       - name: Publish
-        run: npm publish --access public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
