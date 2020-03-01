@@ -1,9 +1,8 @@
 name: Publish
 
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: [published]
 
 jobs:
   publish_npm:
@@ -37,3 +36,5 @@ jobs:
       - name: Create .npmrc
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GPR_ACCESS_TOKEN }}" > ~/.npmrc
+      - name: Publish
+        run: npm publish
