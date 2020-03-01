@@ -1,5 +1,7 @@
 # Welcome to Builders Helpers
 
+![npm](https://img.shields.io/npm/v/@platformbuilders/helpers)
+
 [![codecov](https://codecov.io/gh/platformbuilders/helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/platformbuilders/helpers)
 
 Welcome to the builder helpers package here you will find out all the helpers that we use on our projects
