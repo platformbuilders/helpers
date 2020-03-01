@@ -7,9 +7,6 @@
   "repository": "git@github.com:platformbuilders/helpers.git",
   "author": "Platform Builders <dev@platformbuilders.io>",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "test": "jest --verbose",
     "coverage": "jest --coverage",
