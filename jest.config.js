@@ -1,7 +1,9 @@
 module.exports = {
   preset: 'react-native',
   testEnvironment: 'node',
-  moduleFileExtensions: ['ts', 'tsx', 'js'],
+  verbose: true,
+  automock: false,
+  collectCoverage: true,
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
@@ -20,4 +22,7 @@ module.exports = {
       statements: -10,
     },
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
 };

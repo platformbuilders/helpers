@@ -2,21 +2,24 @@
   "name": "@platformbuilders/helpers",
   "version": "0.0.2",
   "description": "Platfom builders helpers library",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:platformbuilders/helpers.git",
-  "author": "platformbuilders",
+  "author": "Platform Builders <dev@platformbuilders.io>",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "test": "jest --verbose",
-    "jest:coverage": "jest --coverage",
-    "lint": "tsc && eslint '*/**/*.{js,ts,tsx}' --fix",
+    "coverage": "jest --coverage",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "clean": "rm -rf ./node_modules && yarn install",
     "precommit": "yarn lint",
     "preversion": "yarn lint",
+    "prepublish": "tsc",
+    "postversion": "git push && git push --tags",
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major"
@@ -26,7 +29,7 @@
       "yarn pretty",
       "yarn lint",
       "yarn test",
-      "yarn jest:coverage",
+      "yarn coverage",
       "git add ."
     ]
   },

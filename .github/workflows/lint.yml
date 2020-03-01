@@ -1,6 +1,6 @@
-name: Code Validations
+name: Lint
 
-on: pull_request
+on: [push, pull_request]
 
 jobs:
   checking:
@@ -17,5 +17,5 @@ jobs:
         run: yarn lint
       - name: Runs Jest
         run: yarn test
-      - name: Runs Jest Coverage Check
-        run: yarn jest:coverage
+      - name: Runs Coverage Check
+        run: yarn coverage

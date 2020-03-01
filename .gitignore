@@ -60,6 +60,9 @@ buck-out/
 # testing
 /coverage
 
+#dist
+/dist
+
 # Android builds
 *.apk
 

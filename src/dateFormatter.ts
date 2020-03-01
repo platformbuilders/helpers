@@ -1,9 +1,13 @@
 import moment from 'moment';
 
 const ISO_DATE = 'YYYY-MM-DDTHH:mm:ss';
+const SCREEN_DATE = 'DD/MM/YYYY';
 const SHORT_DATE = 'DD/MM/YYYY';
 const LONG_DATE = 'D [de] MMMM';
 const HOUR_MINUTE = 'HH:mm';
+
+export const formatToScreenDate = (date: Date): string =>
+  moment.utc(date, ISO_DATE).format(SCREEN_DATE);
 
 export const formatScreenDateToISO = (date: Date): string =>
   moment.utc(date, SHORT_DATE).format(ISO_DATE);

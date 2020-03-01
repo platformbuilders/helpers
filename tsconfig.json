@@ -3,10 +3,13 @@
     /* Basic Options */
     "target": "ESNext",
     "module": "commonjs",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "declaration": true,
+    "outDir": "dist",
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "react-native",
-    "noEmit": true,
+    "noEmit": false,
     "skipLibCheck": true,
     /* Strict Type-Checking Options */
     "strict": true,
@@ -27,10 +30,11 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "exclude": [
     "__tests__/", // exclude test files
-    "storybook/"
+    "storybook/",
+    "dist"
   ]
 }

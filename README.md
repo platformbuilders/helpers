@@ -1,8 +1,8 @@
 # Welcome to Builders Helpers
 
-Welcome to the builder helpers package here you will find out all the helpers that we use on our projects
+[![codecov](https://codecov.io/gh/platformbuilders/helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/platformbuilders/helpers)
 
-<img src="https://pbs.twimg.com/profile_images/1093878457807847425/3oSyUp1U_400x400.jpg">
+Welcome to the builder helpers package here you will find out all the helpers that we use on our projects
 
 # Whats the idea of this repository
 

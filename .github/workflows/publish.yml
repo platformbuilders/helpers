@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Publish
 
 on:
   push:
@@ -6,9 +6,10 @@ on:
       - '*'
 
 jobs:
-  checking:
-    name: Publish to NPM
+  publish_npm:
     runs-on: ubuntu-latest
+
+    name: Publish to NPM
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
@@ -21,3 +22,18 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish_github:
+    runs-on: ubuntu-latest
+    name: Publish to Github Packages
+    steps:
+      - uses: actions/checkout@master
+      - uses: borales/actions-yarn@v2.1.0
+        with:
+          auth-token: ${{ secrets.GPR_ACCESS_TOKEN }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: platfombuilders
+          cmd: version
+      - name: Create .npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GPR_ACCESS_TOKEN }}" > ~/.npmrc

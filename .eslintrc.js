@@ -8,21 +8,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:sonarjs/recommended',
-    'plugin:promise/recommended'
+    'plugin:promise/recommended',
   ],
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
-  plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'sonarjs', 'promise', 'import'],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-    __DEV__: true,
-  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -30,6 +17,19 @@ module.exports = {
     useJSXTextNode: true,
     project: './tsconfig.json',
     tsconfigRootDir: '.',
+  },
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'jsx-a11y',
+    'sonarjs',
+    'promise',
+    'import',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    __DEV__: true,
   },
   rules: {
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
@@ -57,7 +57,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect'
-    }
-  }
+      version: 'detect',
+    },
+  },
 };
