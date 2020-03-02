@@ -1,2 +1,5 @@
-# Ignores the whole storybook folder
-storybook/
+storybook
+dist
+coverage
+node_modules
+*.d.ts

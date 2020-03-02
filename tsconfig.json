@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "ESNext",
-    "module": "commonjs",
-    "lib": ["es2017", "es7", "es6", "dom"],
+    "target": "es6",
+    "module": "es6",
+    "lib": ["es6"],
+    "types": ["react", "jest"],
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "outDir": "dist",
-    "allowJs": true,
+    "importHelpers": true,
     "resolveJsonModule": true,
-    "jsx": "react-native",
-    "noEmit": false,
+    "baseUrl": ".",
     "skipLibCheck": true,
     /* Strict Type-Checking Options */
     "strict": true,
@@ -25,16 +27,15 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "experimentalDecorators": true,
     /* Module Resolution Options */
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "baseUrl": "."
+    "esModuleInterop": true
   },
+  "compileOnSave": true,
+  "include": ["src"],
   "exclude": [
-    "__tests__/", // exclude test files
-    "storybook/",
+    "node_modules", // exclude test files
     "dist"
   ]
 }

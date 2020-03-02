@@ -1,5 +1,4 @@
 module.exports = {
-  preset: 'react-native',
   testEnvironment: 'node',
   verbose: true,
   automock: false,
