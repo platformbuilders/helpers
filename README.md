@@ -1,8 +1,17 @@
 # Welcome to Builders Helpers
 
-![npm](https://img.shields.io/npm/v/@platformbuilders/helpers)
+[![Build Status][check-badge]][workflows]
+[![codecov][codecov]](https://codecov.io/gh/platformbuilders/helpers)
+[![npm][npm-badge]][npm]
+[![MIT][license-badge]][license]
 
-[![codecov](https://codecov.io/gh/platformbuilders/helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/platformbuilders/helpers)
+[npm-badge]: https://img.shields.io/npm/v/@platformbuilders/helpers.svg
+[npm]: https://www.npmjs.com/package/@platformbuilders/helpers
+[license-badge]: https://img.shields.io/dub/l/vibe-d.svg
+[license]: https://raw.githubusercontent.com/platformbuilders/react-native-element/master/LICENSE.md
+[workflows]: https://github.com/platformbuilders/helpers/actions
+[check-badge]: https://github.com/platformbuilders/helpers/workflows/check/badge.svg
+[codecov]: https://codecov.io/gh/platformbuilders/helpers/branch/master/graph/badge.svg
 
 Welcome to the builder helpers package here you will find out all the helpers that we use on our projects
 
