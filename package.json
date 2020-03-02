@@ -8,7 +8,8 @@
   "author": "Platform Builders <dev@platformbuilders.io>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
+    "coverage": "jest --coverage",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "clean": "rm -rf ./node_modules && yarn install",
@@ -24,7 +25,7 @@
     "*.js": [
       "yarn pretty",
       "yarn lint",
-      "yarn test",
+      "yarn test --passWithNoTests",
       "git add ."
     ]
   },
