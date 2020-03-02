@@ -9,10 +9,9 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsConfigFile: 'tsconfig.json',
-      babelConfig: true,
     },
   },
-  testMatch: ['**/__tests__/*.+(ts|tsx|js)'],
+  testMatch: ['**/__tests__/*.spec.+(ts)'],
   coverageThreshold: {
     global: {
       branches: 75,
@@ -22,6 +21,6 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
+  collectCoverageFrom: ['src/**/*.{ts}', 'src/**/{!(index),}.ts'],
   moduleDirectories: ['node_modules', '<rootDir>'],
 };

@@ -22,9 +22,7 @@ test('should format a short date to the right pattern', () => {
 });
 
 test('should format a long date to the right pattern', () => {
-  const longDateRegex = new RegExp(
-    /^(3[01]|0[1-9]|[12][0-9])[' de ']+([A-z]+)/g,
-  );
+  const longDateRegex = new RegExp(/[0-9]\s[a-zA-Z]{2}\s[a-zA-Z]+/g);
   const longDateFormatted = formatLongDate(new Date());
   expect(longDateRegex.test(longDateFormatted)).toBe(true);
 });

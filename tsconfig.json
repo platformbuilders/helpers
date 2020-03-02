@@ -3,7 +3,7 @@
     /* Basic Options */
     "target": "es6",
     "module": "es6",
-    "lib": ["es6"],
+    "lib": ["esnext", "DOM"],
     "types": ["react", "jest"],
     "declaration": true,
     "declarationMap": true,
