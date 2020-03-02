@@ -3,3 +3,5 @@ dist
 coverage
 node_modules
 *.d.ts
+jest.config.js
+babel.config.js
