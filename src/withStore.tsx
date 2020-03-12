@@ -11,9 +11,9 @@ interface MobxStores {
   [storeName: string]: any;
 }
 
-export function createMobxContainer<
-  Component extends any,
-  Stores extends MobxStores
->(Wrapped: Component, stores: Stores): IReactComponent {
+export function withStore<Component extends any, Stores extends MobxStores>(
+  Wrapped: Component,
+  stores: Stores,
+): IReactComponent {
   return observer((): JSX.Element => <Wrapped {...stores} />);
 }

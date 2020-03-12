@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { observable } from 'mobx';
 import { mount } from 'enzyme';
-import { createMobxContainer } from '..';
+import { withStore } from '..';
 
 class TestStore {
   @observable
@@ -27,7 +27,7 @@ describe('Create mobx container tests', () => {
       );
     };
 
-    const Wrapped = createMobxContainer(Component, { testStore: store });
+    const Wrapped = withStore(Component, { testStore: store });
 
     const result = mount(<Wrapped />);
 
