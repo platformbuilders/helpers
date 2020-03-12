@@ -1,5 +1,4 @@
 module.exports = {
-  // testEnvironment: 'node',
   verbose: true,
   automock: false,
   collectCoverage: true,
