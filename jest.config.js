@@ -1,5 +1,4 @@
 module.exports = {
-  testEnvironment: 'node',
   verbose: true,
   automock: false,
   collectCoverage: true,
@@ -11,7 +10,7 @@ module.exports = {
       tsConfigFile: 'tsconfig.json',
     },
   },
-  testMatch: ['**/__tests__/*.spec.+(ts)'],
+  testMatch: ['**/__tests__/*.spec.+(ts|tsx)'],
   coverageThreshold: {
     global: {
       branches: 75,
@@ -20,7 +19,10 @@ module.exports = {
       statements: -10,
     },
   },
+  setupFiles: ['<rootDir>/src/tools/test-setup.ts'],
+  setupFilesAfterEnv: ['./node_modules/jest-enzyme/lib/index.js'],
+  unmockedModulePathPatterns: ['react', 'enzyme', 'jest-enzyme'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  collectCoverageFrom: ['src/**/*.{ts}', 'src/**/{!(index),}.ts'],
+  collectCoverageFrom: ['src/**/*.{ts|tsx}', 'src/**/{!(index),}.ts'],
   moduleDirectories: ['node_modules', '<rootDir>'],
 };
