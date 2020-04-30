@@ -1,4 +1,4 @@
-import switchStyle from '../switchStyle';
+import { switchStyle } from '../switchStyle';
 
 describe('Switch Style tests', () => {
   it('should switch style', () => {

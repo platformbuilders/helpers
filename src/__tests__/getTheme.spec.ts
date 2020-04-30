@@ -1,4 +1,4 @@
-import getTheme from '../getTheme';
+import { getTheme } from '../getTheme';
 
 const theme = {
   white: '#FFF',

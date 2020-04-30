@@ -1,6 +1,6 @@
 import { isFunction } from 'lodash';
 
-const switchStyle = (name: string) => (stylesObj: {
+export const switchStyle = (name: string) => (stylesObj: {
   [x: string]: any;
 }) => (props: { [x: string]: any }): string => {
   const propValue = props[name] || 'default';
@@ -10,5 +10,3 @@ const switchStyle = (name: string) => (stylesObj: {
 
   return switchObj;
 };
-
-export default switchStyle;

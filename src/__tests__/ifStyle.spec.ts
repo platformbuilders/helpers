@@ -1,4 +1,4 @@
-import ifStyle from '../ifStyle';
+import { ifStyle } from '../ifStyle';
 
 const style = {
   fullWidth: 375,

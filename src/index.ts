@@ -1,6 +1,7 @@
-export * from './dateFormatter';
-export * from './stringFormatter';
-export * from './withStore';
-export { default as getTheme } from './getTheme';
-export { default as ifStyle } from './ifStyle';
-export { default as switchStyle } from './switchStyle';
+export { currencyParser } from './currencyParser';
+export { parseToThousands } from './parseToThousands';
+export { removeWhiteSpaces } from './removeWhiteSpaces';
+export { toOnlyNumbers } from './toOnlyNumbers';
+export { getTheme } from './getTheme';
+export { ifStyle } from './ifStyle';
+export { switchStyle } from './switchStyle';
