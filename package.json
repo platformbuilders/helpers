@@ -1,12 +1,20 @@
 {
   "name": "@platformbuilders/helpers",
-  "version": "0.0.20",
+  "version": "0.1.0",
   "description": "Platfom builders helpers library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git@github.com:platformbuilders/helpers.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platformbuilders/helpers.git"
+  },
+  "keywords": [
+    "platformbuilders",
+    "helpers"
+  ],
   "author": "Platform Builders <dev@platformbuilders.io>",
   "license": "MIT",
+  "private": false,
   "scripts": {
     "test": "jest",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
