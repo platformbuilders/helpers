@@ -29,7 +29,7 @@
     "version:major": "npm version major"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{ts,js}": [
       "yarn pretty",
       "yarn lint",
       "yarn test --passWithNoTests",
