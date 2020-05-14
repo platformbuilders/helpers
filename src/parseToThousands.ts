@@ -5,7 +5,5 @@ export const parseToThousands = (value: string): string => {
     return '0';
   }
 
-  return Numeral(value)
-    .format('0,0')
-    .replace(',', '.');
+  return Numeral(value).format('0,0').replace(',', '.');
 };

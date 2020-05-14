@@ -8,7 +8,7 @@
 [npm-badge]: https://img.shields.io/npm/v/@platformbuilders/helpers.svg
 [npm]: https://www.npmjs.com/package/@platformbuilders/helpers
 [license-badge]: https://img.shields.io/dub/l/vibe-d.svg
-[license]: https://raw.githubusercontent.com/platformbuilders/react-native-element/master/LICENSE.md
+[license]: https://raw.githubusercontent.com/platformbuilders/helpers/master/LICENSE.md
 [workflows]: https://github.com/platformbuilders/helpers/actions
 [check-badge]: https://github.com/platformbuilders/helpers/workflows/check/badge.svg
 [codecov]: https://codecov.io/gh/platformbuilders/helpers/branch/master/graph/badge.svg
