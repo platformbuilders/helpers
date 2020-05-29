@@ -1,5 +1,5 @@
 export const currencyParser = (
-  value: string,
+  value: string | number,
   numberOfDecimalPlaces = 2,
 ): string => {
   if (!value) {
