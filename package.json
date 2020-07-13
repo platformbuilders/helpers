@@ -18,7 +18,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
-    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
+    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.ts\"",
     "clean": "rm -rf ./node_modules && yarn install",
     "build": "yarn lint && yarn test && tsc ",
     "prepublish": "yarn build",
