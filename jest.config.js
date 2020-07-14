@@ -13,10 +13,10 @@ module.exports = {
   testMatch: ['**/__tests__/*.spec.+(ts|tsx)'],
   coverageThreshold: {
     global: {
-      branches: 75,
-      functions: 75,
-      lines: 75,
-      statements: -10,
+      branches: 98,
+      functions: 98,
+      lines: 98,
+      statements: 98,
     },
   },
   setupFiles: ['<rootDir>/src/tools/test-setup.ts'],
