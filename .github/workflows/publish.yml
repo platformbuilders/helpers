@@ -7,19 +7,27 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     name: Publish to npm
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v1
         with:
-          node-version: 13
-          registry-url: https://registry.npmjs.org/
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org/'
       - name: Install
-        run: yarn install
+        run: npm install
+      # Publish to npm
       - name: Publish
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@platformbuilders'
+      # Publish to GitHub Packages
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
