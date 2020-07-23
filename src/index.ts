@@ -1,7 +1,8 @@
-export { currencyParser } from './currencyParser';
-export { parseToThousands } from './parseToThousands';
-export { removeWhiteSpaces } from './removeWhiteSpaces';
-export { toOnlyNumbers } from './toOnlyNumbers';
-export { getTheme } from './getTheme';
-export { ifStyle } from './ifStyle';
-export { switchStyle } from './switchStyle';
+export * from './currencyParser';
+export * from './parseToThousands';
+export * from './removeWhiteSpaces';
+export * from './toOnlyNumbers';
+export * from './getTheme';
+export * from './ifStyle';
+export * from './switchStyle';
+export * from './base64';
