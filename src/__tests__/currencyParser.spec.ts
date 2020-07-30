@@ -6,6 +6,10 @@ describe('currencyParser tests', () => {
       const parsed = currencyParser('abc');
       expect(parsed).toBe('R$ 0,00');
     });
+    it('should format currency properly if value has only letters and consider number of decimals', () => {
+      const parsed = currencyParser('abc', 0);
+      expect(parsed).toBe('R$ 0');
+    });
 
     it('should format currency properly if value has letters and numbers', () => {
       const parsed = currencyParser('1k');
