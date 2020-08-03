@@ -35,7 +35,7 @@ yarn add @platformbuilders/helpers
 import { getTheme } from '@platformbuilders/helpers'
 ```
 
-##  Helpers Documentation
+#  Helpers Documentation
 
 | Name                                                | Returns                                                       | Arguments                                  |
 | --------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ |

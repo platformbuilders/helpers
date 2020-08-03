@@ -32,7 +32,8 @@
     "*.{ts,js}": [
       "yarn pretty",
       "yarn lint",
-      "yarn test"
+      "yarn test",
+      "git add ."
     ]
   },
   "husky": {
