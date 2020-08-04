@@ -4,7 +4,7 @@ Is a currency format utility.
 
 ## Arguments
 
-- `value: String | Number`: A value(string or number) to be format. Positive or negative.
+- `value: String | Number`: A value to be format. Positive or negative.
 - `numberOfDecimalPlaces?: Number`: A positive number. If is negative number value default is __2__. Optional
 
 ## Returns
