@@ -6,14 +6,11 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
+      - uses: actions/checkout@v2
       - name: Install
         uses: borales/actions-yarn/@v2.0.0
         with:
-          cmd: install
+          cmd: install --ignore-engines
       - name: Build
         uses: borales/actions-yarn/@v2.0.0
         with:
