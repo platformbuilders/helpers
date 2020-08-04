@@ -34,3 +34,16 @@ yarn add @platformbuilders/helpers
 ```
 import { getTheme } from '@platformbuilders/helpers'
 ```
+
+#  Helpers Documentation
+
+| Name                                                | Returns                                                       | Arguments                                  |
+| --------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ |
+| [`formatToBase64`](./docs/formatToBase64.md)        | string                                                        | (value)                                    |
+| [`currencyParser`](./docs/currencyParser.md)        | string                                                        | (value, numberOfDecimalPlaces)             |
+| [`getTheme`](./docs/getTheme.md)                    | string                                                        | (themeProp)({ theme })                     |
+| [`ifStyle`](./docs/ifStyle.md)                      | truthy OR falsy                                               | (prop)(truthy, falsy)(style)               |
+| [`parseToThousands`](./docs/parseToThousands.md)    | string                                                        | (value)                                    |
+| [`removeWhiteSpaces`](./docs/removeWhiteSpaces.md)  | string                                                        | (value)                                    |
+| [`switchStyle`](./docs/switchStyle.md)              | string                                                        | (name)(stylesObj)(props)                   |
+| [`toOnlyNumbers`](./docs/toOnlyNumbers.md)          | string                                                        | (value)                                    |

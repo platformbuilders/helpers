@@ -1,5 +1,5 @@
-export const formatToBase64 = (string: string): string => {
-  if (!string) return '';
+export const formatToBase64 = (value: string): string => {
+  if (!value) return '';
 
-  return `data:image/png;base64,${string}`;
+  return `data:image/png;base64,${value}`;
 };

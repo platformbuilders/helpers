@@ -1,5 +1,5 @@
-export const removeWhiteSpaces = (param: string): string => {
-  if (!param) return '';
+export const removeWhiteSpaces = (value: string): string => {
+  if (!value) return '';
 
-  return param.replace(/\s/g, '');
+  return value.replace(/\s/g, '');
 };
