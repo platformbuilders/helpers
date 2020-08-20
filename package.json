@@ -20,7 +20,8 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.ts\"",
     "clean": "rm -rf ./node_modules && yarn install",
-    "build": "yarn lint && yarn test && tsc ",
+    "build": "yarn lint && yarn test && rollup -c && yarn fix:native:dir",
+    "fix:native:dir": "node scripts/moveNativeDirectories.js",
     "prepublish": "yarn build",
     "precommit": "yarn lint",
     "postversion": "git push && git push --tags",
@@ -48,9 +49,16 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
+  "peerDependencies": {
+    "react-native": ">=0.63.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-flow-strip-types": "^7.10.4",
+    "@babel/plugin-transform-object-assign": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
     "@babel/runtime": "^7.9.6",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
@@ -60,10 +68,12 @@
     "@types/numeral": "^0.0.28",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/react-native": "^0.63.8",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "babel-jest": "^26.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.0.0",
@@ -84,8 +94,14 @@
     "jest-environment-node": "^26.0.1",
     "jest-enzyme": "^7.1.2",
     "lint-staged": "^10.2.2",
+    "mz": "^2.7.0",
     "prettier": "^2.0.5",
+    "react-native": "^0.63.2",
+    "react-native-size-matters": "^0.3.0",
+    "rmfr": "^2.0.0",
+    "rollup": "^2.26.4",
+    "rollup-plugin-typescript2": "^0.27.2",
     "ts-jest": "^26.0.0",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.7"
   }
 }

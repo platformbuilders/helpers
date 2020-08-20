@@ -2,6 +2,9 @@
 #
 .DS_Store
 
+# Native Compiled
+native/
+
 # Xcode
 #
 build/
