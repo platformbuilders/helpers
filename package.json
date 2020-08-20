@@ -44,7 +44,8 @@
   },
   "peerDependencies": {
     "react-native": ">=0.63.2",
-    "react-native-haptic": ">=1.0.1"
+    "react-native-haptic": ">=1.0.1",
+    "react-native-size-matters": ">=0.3.0"
   },
   "dependencies": {
     "lodash": "^4.17.20",

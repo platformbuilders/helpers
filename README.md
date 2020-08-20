@@ -32,7 +32,7 @@ yarn add @platformbuilders/helpers
 **If using Native helpers:**
 
 ```
-yarn add react-native-haptic
+yarn add react-native-haptic react-native-size-matters
 ```
 
 3. Import:
