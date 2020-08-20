@@ -7221,6 +7221,11 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.8.1, react-is@^16.8.4, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-haptic@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-haptic/-/react-native-haptic-1.0.1.tgz#5ecedb6049c1b0cdeca5e31e4fbde16a622675f3"
+  integrity sha512-Eg5omAZYZsIGe+QsVkQrK3Krgv96qejYyfgPUfyIELZ1j6W7RnisduJJ+65aV9Nw/k6gxrmvEUC/Uuap4qf8JA==
+
 react-native-size-matters@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.3.0.tgz#0692e324a189884819b570c4cab24d27ecd4311d"
