@@ -57,6 +57,7 @@ import { isIOS } from '@platformbuilders/helpers/native'
 | [`removeWhiteSpaces`](./docs/removeWhiteSpaces.md) | string          | (value)                        |
 | [`switchStyle`](./docs/switchStyle.md)             | string          | (name)(stylesObj)(props)       |
 | [`toOnlyNumbers`](./docs/toOnlyNumbers.md)         | string          | (value)                        |
+| [`pxToRem`](./docs/pxToRem.md)                     | string          | (pixel, baseline?)             |
 
 ## React Native
 
