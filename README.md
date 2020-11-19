@@ -54,6 +54,7 @@ import { isIOS } from '@platformbuilders/helpers/native'
 | [`getTheme`](./docs/getTheme.md)                   | string          | (themeProp)({ theme })         |
 | [`ifStyle`](./docs/ifStyle.md)                     | truthy OR falsy | (prop)(truthy, falsy)(style)   |
 | [`parseToThousands`](./docs/parseToThousands.md)   | string          | (value)                        |
+| [`currencyToNumber`](./docs/currencyToNumber.md)   | string          | (value)                        |
 | [`removeWhiteSpaces`](./docs/removeWhiteSpaces.md) | string          | (value)                        |
 | [`switchStyle`](./docs/switchStyle.md)             | string          | (name)(stylesObj)(props)       |
 | [`toOnlyNumbers`](./docs/toOnlyNumbers.md)         | string          | (value)                        |

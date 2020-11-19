@@ -7,3 +7,4 @@ export * from './ifStyle';
 export * from './switchStyle';
 export * from './base64';
 export * from './pixelToRem';
+export * from './currencyToNumber';
