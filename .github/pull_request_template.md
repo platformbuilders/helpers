@@ -10,5 +10,6 @@
 
 ## Checklist 🚨
 
+- [ ] Testado usando Yalc
+- [ ] Meu código segue o code style da Builders
 - [ ] Meu código foi feito utilizando TDD (**testes unitários obrigatórios**)
-- [ ] Meu código segue o code style da Builders.
