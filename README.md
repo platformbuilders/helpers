@@ -1,4 +1,4 @@
-# Welcome to Builders Helpers
+# Welcome to Platform Builders Helpers
 
 [![Build Status][check-badge]][workflows]
 [![codecov][codecov]](https://codecov.io/gh/platformbuilders/helpers)
@@ -13,7 +13,7 @@
 [check-badge]: https://github.com/platformbuilders/helpers/workflows/check/badge.svg
 [codecov]: https://codecov.io/gh/platformbuilders/helpers/branch/master/graph/badge.svg
 
-Welcome to the builder helpers package here you will find out all the helpers that we use on our projects
+Welcome to the Platform Builder `helpers` package here you will find out all the helpers that we use on our projects
 
 # Whats the idea of this repository
 
