@@ -12,7 +12,7 @@
     "platformbuilders",
     "helpers"
   ],
-  "author": "Platform Builders <dev@platformbuilders.io>",
+  "author": "Platform Builders <apps@platformbuilders.io>",
   "license": "MIT",
   "private": false,
   "scripts": {
