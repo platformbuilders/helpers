@@ -8,10 +8,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install
-        uses: borales/actions-yarn/@v2.0.0
+        uses: borales/actions-yarn/@v2.3.0
         with:
           cmd: install --ignore-engines
+      - name: Linter
+        uses: borales/actions-yarn/@v2.3.0
+        with:
+          cmd: lint
       - name: Build
-        uses: borales/actions-yarn/@v2.0.0
+        uses: borales/actions-yarn/@v2.3.0
         with:
           cmd: build
