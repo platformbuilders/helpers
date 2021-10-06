@@ -1,4 +1,4 @@
-import { currencyToNumber } from '../currencyToNumber';
+import { currencyToNumber } from '../shared/currencyToNumber';
 
 describe('currencyToNumber tests', () => {
   it('should parse to thousands', () => {

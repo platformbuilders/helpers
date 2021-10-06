@@ -1,4 +1,4 @@
-import { switchStyle } from '../switchStyle';
+import { switchStyle } from '../shared/switchStyle';
 
 describe('Switch Style tests', () => {
   it('should switch style with invalid', () => {

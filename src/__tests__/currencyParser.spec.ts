@@ -1,4 +1,4 @@
-import { currencyParser } from '../currencyParser';
+import { currencyParser } from '../shared/currencyParser';
 
 describe('currencyParser tests', () => {
   describe('with string', () => {
