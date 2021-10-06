@@ -8,15 +8,19 @@ const distModulesDirectory = `${__dirname}/../dist`;
 
 const blackListRemove = [
   'native',
+  'shared',
+  'web',
   'index.js',
   'index.js.map',
   'index.esm.js',
   'index.esm.js.map',
+  'index.d.ts',
 ];
 
 async function removeAndMoveNewFiles() {
   await rimraf(`${nativeModulesDirectory}/__tests__`);
   await rimraf(`${nativeModulesDirectory}/tools`);
+  await rimraf(`${nativeModulesDirectory}/web`);
   await rimraf(`${nativeFolder}/__tests__`);
   const contents = await mz.readdir(nativeModulesDirectory);
   await Promise.all(
@@ -25,16 +29,13 @@ async function removeAndMoveNewFiles() {
       await mz.unlink(`${nativeModulesDirectory}/${filename}`);
     }),
   );
-  const nativeFolderContent = await mz.readdir(nativeFolder);
-  await Promise.all(
-    nativeFolderContent.map(async (filename) => {
-      await mz.rename(
-        `${nativeFolder}/${filename}`,
-        `${nativeModulesDirectory}/${filename}`,
-      );
-    }),
+}
+
+async function referenceTypeDefinitions() {
+  await mz.writeFile(
+    `${nativeModulesDirectory}/index.d.ts`,
+    `export * from './native';`,
   );
-  await mz.rmdir(nativeFolder);
 }
 
 async function removeNativeFolderFromDist() {
@@ -44,4 +45,5 @@ async function removeNativeFolderFromDist() {
 }
 
 removeAndMoveNewFiles();
+referenceTypeDefinitions();
 removeNativeFolderFromDist();
