@@ -1,4 +1,4 @@
-import { pxToRem } from '../pixelToRem';
+import { pxToRem } from '../shared/pixelToRem';
 
 describe('pixelToRem helpers tests', () => {
   it('should return a formatted rem', () => {

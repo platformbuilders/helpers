@@ -1,4 +1,4 @@
-import { formatToBase64 } from '../base64';
+import { formatToBase64 } from '../shared/base64';
 
 describe('base64 helpers tests', () => {
   it('should return a formatted string when no string sent', () => {

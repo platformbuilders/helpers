@@ -1,4 +1,4 @@
-import { toOnlyNumbers } from '../toOnlyNumbers';
+import { toOnlyNumbers } from '../shared/toOnlyNumbers';
 
 describe('toOnlyNumbers tests', () => {
   it('should format to string empty properly', () => {

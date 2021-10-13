@@ -1,4 +1,4 @@
-import { parseToThousands } from '../parseToThousands';
+import { parseToThousands } from '../shared/parseToThousands';
 
 describe('parseToThousands tests', () => {
   it('should parse to thousands', () => {
