@@ -66,3 +66,4 @@ import { isIOS } from '@platformbuilders/helpers/native'
 | --------------------------------------------------- | ------- | ------------------ |
 | [`isIOS`](./docs/native/isIOS.md)                   | boolean |                    |
 | [`generateHaptic`](./docs/native/generateHaptic.md) | void    | HapticFeedbackType |
+| [`getShadow`](./docs/native/getShadow.md)           | void    | GetShadowType      |
