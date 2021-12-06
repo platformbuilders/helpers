@@ -22,7 +22,7 @@
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.{jsx,ts,tsx,json}\"",
     "uglify": "for f in dist/*.js; do short=${f%.js}; uglifyjs $f > $short.min.js; rm -rf $f; mv $short.min.js $short.js; done",
     "clean": "rm -rf ./node_modules && yarn install",
-    "build": "yarn lint && yarn test && rollup -c && yarn build:native && yarn uglify",
+    "build": "rm -rf ./dist && yarn lint && yarn test && rollup -c && yarn build:native && yarn uglify",
     "build:native": "node scripts/moveNativeDirectories.js",
     "prepare": "husky install && yarn build",
     "precommit": "yarn lint",
