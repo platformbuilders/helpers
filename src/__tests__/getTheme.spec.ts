@@ -10,8 +10,13 @@ describe('Get theme helper tests', () => {
     expect(color).toBe(theme.white);
   });
 
-  it('shoud not return any color if the prop does not exists', () => {
-    const color = getTheme('black')({ theme });
+  it('should not return any color if the prop does not exists', () => {
+    const color = getTheme('black' as 'white')({ theme });
     expect(color).toBe(undefined);
+  });
+
+  it('should get the key using a function as param', () => {
+    const color = getTheme((t) => t.white)({ theme });
+    expect(color).toBe(theme.white);
   });
 });
