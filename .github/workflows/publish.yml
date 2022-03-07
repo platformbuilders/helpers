@@ -15,11 +15,15 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org/'
+      - name: Set NPM Variables
+        run: echo "$PACKAGES_NPMRC" > .npmrc
+        env:
+          PACKAGES_NPMRC: ${{ secrets.PACKAGES_NPMRC }}
       - name: Install
-        run: npm install
+        run: yarn install
       # Publish to npm
       - name: Publish
-        run: npm publish
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       # Setup .npmrc file to publish to GitHub Packages
@@ -28,6 +32,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@platformbuilders'
       # Publish to GitHub Packages
-      - run: npm publish
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
