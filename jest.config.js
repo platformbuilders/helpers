@@ -15,7 +15,7 @@ module.exports = {
       babelConfig: true,
     },
   },
-  transformIgnorePatterns: ['node_modules/(?!@platformbuilders|react-native)'],
+  transformIgnorePatterns: ['node_modules/(?!@platformbuilders|@react-native|react-native)'],
   modulePathIgnorePatterns: ['<rootDir>/dist/'],
   testMatch: ['**/__tests__/*.spec.+(ts|tsx)'],
   coverageThreshold: {
