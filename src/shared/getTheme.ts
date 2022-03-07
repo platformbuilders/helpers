@@ -1,6 +1,13 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { get } from 'lodash';
+import { DefaultTheme } from 'styled-components';
 
 export const getTheme =
-  (themeProp: string) =>
-  ({ theme }: any): string =>
-    get(theme, themeProp);
+  <Theme extends DefaultTheme>(
+    themeProp: Flatten<Theme> | ((theme: DefaultTheme) => string | number),
+  ) =>
+  ({ theme }: { theme: DefaultTheme }): string | number => {
+    return typeof themeProp === 'function'
+      ? themeProp(theme)
+      : get(theme, themeProp);
+  };
