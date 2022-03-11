@@ -1,6 +1,6 @@
 {
   "name": "@platformbuilders/helpers",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Builders helpers library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
