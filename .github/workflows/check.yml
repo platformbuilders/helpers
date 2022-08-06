@@ -7,19 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
       - name: Set NPM Variables
         run: echo "$PACKAGES_NPMRC" > .npmrc
         env:
           PACKAGES_NPMRC: ${{ secrets.PACKAGES_NPMRC }}
       - name: Install
-        uses: borales/actions-yarn/@v2.3.0
-        with:
-          cmd: install --ignore-engines
-      - name: Linter
-        uses: borales/actions-yarn/@v2.3.0
-        with:
-          cmd: lint
+        run: yarn install --ignore-engines
+      - name: Local Linter
+        run: yarn lint
       - name: Build
-        uses: borales/actions-yarn/@v2.3.0
-        with:
-          cmd: build
+        run: yarn build
