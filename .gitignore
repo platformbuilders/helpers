@@ -65,6 +65,7 @@ buck-out/
 
 #dist
 /dist
+.yalc
 
 # Android builds
 *.apk
