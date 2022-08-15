@@ -51,14 +51,10 @@ import { isIOS } from '@platformbuilders/helpers/native'
 | -------------------------------------------------- | --------------- | ------------------------------ |
 | [`formatToBase64`](./docs/formatToBase64.md)       | string          | (value)                        |
 | [`currencyParser`](./docs/currencyParser.md)       | string          | (value, numberOfDecimalPlaces) |
-| [`getTheme`](./docs/getTheme.md)                   | string          | (themeProp)({ theme })         |
-| [`ifStyle`](./docs/ifStyle.md)                     | truthy OR falsy | (prop)(truthy, falsy)(style)   |
 | [`parseToThousands`](./docs/parseToThousands.md)   | string          | (value)                        |
 | [`currencyToNumber`](./docs/currencyToNumber.md)   | string          | (value)                        |
 | [`removeWhiteSpaces`](./docs/removeWhiteSpaces.md) | string          | (value)                        |
-| [`switchStyle`](./docs/switchStyle.md)             | string          | (name)(stylesObj)(props)       |
 | [`toOnlyNumbers`](./docs/toOnlyNumbers.md)         | string          | (value)                        |
-| [`pxToRem`](./docs/pxToRem.md)                     | string          | (pixel, baseline?)             |
 
 ## React Native
 
@@ -66,4 +62,3 @@ import { isIOS } from '@platformbuilders/helpers/native'
 | --------------------------------------------------- | ------- | ------------------ |
 | [`isIOS`](./docs/native/isIOS.md)                   | boolean |                    |
 | [`generateHaptic`](./docs/native/generateHaptic.md) | void    | HapticFeedbackType |
-| [`getShadow`](./docs/native/getShadow.md)           | void    | GetShadowType      |
