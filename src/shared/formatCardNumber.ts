@@ -9,7 +9,7 @@ export const formatCardNumber = (value: string): string => {
   }
 
   if (parts.length) {
-    return parts.join('  ');
+    return parts.join(' ');
   }
   return value;
 };
