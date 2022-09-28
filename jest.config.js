@@ -6,12 +6,6 @@ module.exports = {
   collectCoverage: true,
   testEnvironment: 'node',
   preset: 'react-native',
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.test.json',
-      babelConfig: true,
-    },
-  },
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
     '^.+\\.(ts|tsx)$': 'ts-jest',
