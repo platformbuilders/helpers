@@ -19,11 +19,11 @@ jobs:
         env:
           PACKAGES_NPMRC: ${{ secrets.PACKAGES_NPMRC }}
       - name: Install
-        run: npm install
+        run: yarn install --ignore-engines
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Run jest tests
-        run: npm test
+        run: yarn test
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} #

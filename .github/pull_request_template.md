@@ -2,11 +2,15 @@
 
 <!-- explicação do que foi feito -->
 
+## Como Validei?
+
+<!-- explicação como você validou suas alterações -->
 ## Tipo de mudança
 
 - [ ] Nova feature (mudança non-breaking que adiciona uma funcionalidade)
 - [ ] Bug fix (mudança non-breaking que conserta um problema)
 - [ ] Breaking change (ajuste ou funcionalidade que pode causar uma quebra numa funcionalidade já existente)
+- [ ] Chore (nenhuma das anteriores, como upgrade de libs)
 
 ## Checklist 🚨
 
