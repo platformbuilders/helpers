@@ -4,6 +4,7 @@ const NUMBER_OF_DECIMAL_PLACES_DEFAULT = 2;
 export const currencyParser = (
   value: string | number,
   numberOfDecimalPlaces = NUMBER_OF_DECIMAL_PLACES_DEFAULT,
+  currency = 'R$',
 ): string => {
   let formatValue = value;
   const isValidValue = regex.test(String(value));
@@ -21,5 +22,5 @@ export const currencyParser = (
     .replace('.', ',')
     .replace(/(\d)(?=(\d{3})+,)/g, '$1.');
 
-  return `R$ ${withDecimalValue}`;
+  return `${currency} ${withDecimalValue}`;
 };
