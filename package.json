@@ -1,6 +1,6 @@
 {
   "name": "@platformbuilders/helpers",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "Builders helpers library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,16 +32,14 @@
     "version:major": "npm version major"
   },
   "peerDependencies": {
-    "lodash": "4.17.21",
+    "lodash": ">=4.17.21",
+    "numeral": ">=2",
+    "react": ">=18",
+    "react-dom": ">=18",
     "react-native": ">=0.69.3",
     "react-native-haptic": ">=1.0.1",
-    "react-native-size-matters": ">=0.3.0"
-  },
-  "dependencies": {
-    "numeral": "2.0.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "5.3.6"
+    "react-native-size-matters": ">=0.3.0",
+    "styled-components": ">=5"
   },
   "devDependencies": {
     "@babel/core": "7.20.2",
@@ -82,6 +80,7 @@
     "jest-environment-node": "29.3.1",
     "metro-react-native-babel-preset": "0.73.3",
     "mz": "2.7.0",
+    "numeral": "2.0.6",
     "prettier": "2.7.1",
     "react-native": "0.70.6",
     "react-native-haptic": "1.0.1",
