@@ -50,6 +50,7 @@
     "@babel/preset-env": "7.20.2",
     "@babel/preset-react": "7.18.6",
     "@babel/runtime": "7.20.1",
+    "@types/dompurify": "^2.4.0",
     "@types/jest": "29.2.3",
     "@types/lodash": "4.14.189",
     "@types/numeral": "2.0.2",
@@ -91,5 +92,8 @@
     "ts-jest": "29.0.3",
     "typescript": "4.9.3",
     "uglify-js": "3.17.4"
+  },
+  "dependencies": {
+    "isomorphic-dompurify": "^1.0.0"
   }
 }
