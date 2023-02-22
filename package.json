@@ -1,6 +1,6 @@
 {
   "name": "@platformbuilders/helpers",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Builders helpers library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -92,8 +92,5 @@
     "ts-jest": "29.0.3",
     "typescript": "4.9.3",
     "uglify-js": "3.17.4"
-  },
-  "dependencies": {
-    "isomorphic-dompurify": "^1.0.0"
   }
 }
