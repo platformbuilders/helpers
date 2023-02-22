@@ -1,26 +1,7 @@
-import * as DOMPurify from 'isomorphic-dompurify';
-
-type ConfigSanitize = DOMPurify.Config & {
-  RETURN_DOM_FRAGMENT?: false | undefined;
-  RETURN_DOM?: false | undefined;
-};
-
-const defaultConfig: ConfigSanitize = {
-  RETURN_DOM_FRAGMENT: false,
-  SANITIZE_DOM: true,
-  USE_PROFILES: { html: false },
-};
-
-export const sanitizeValues = <T = Record<string, any>>(
-  values: T,
-  config?: ConfigSanitize,
-): T => {
-  const purifiedValues = DOMPurify.sanitize(JSON.stringify(values), {
-    ...defaultConfig,
-    ...config,
-  });
-
-  return JSON.parse(purifiedValues);
+export const sanitizeValues = <T = Record<string, any>>(values: T): T => {
+  if (!values) return {} as T;
+  const strippedString = JSON.stringify(values).replace(/<\/?[^>]+(>|$)/g, '');
+  return JSON.parse(strippedString);
 };
 
 export const isSecureLink = (url: string): boolean => {
