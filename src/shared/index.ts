@@ -7,3 +7,4 @@ export * from './currencyToNumber';
 export * from './addMaskToCardNumber';
 export * from './formatCardNumber';
 export * from './sanitizer';
+export * from './formatToPhone';
