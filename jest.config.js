@@ -17,10 +17,10 @@ module.exports = {
   testMatch: ['**/__tests__/*.spec.+(ts|tsx)'],
   coverageThreshold: {
     global: {
-      branches: 0,
-      functions: 0,
-      lines: 0,
-      statements: 0,
+      branches: 50,
+      functions: 70,
+      lines: 75,
+      statements: 75,
     },
   },
   unmockedModulePathPatterns: ['react'],

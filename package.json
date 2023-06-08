@@ -33,6 +33,13 @@
     "version:minor": "npm version minor",
     "version:major": "npm version major"
   },
+  "lint-staged": {
+    "src/**/*.ts?(x)": [
+      "yarn pretty",
+      "yarn lint",
+      "yarn test --coverage --findRelatedTests"
+    ]
+  },
   "peerDependencies": {
     "lodash": ">=4.17.21",
     "numeral": ">=2",
