@@ -1,6 +1,6 @@
 {
   "name": "@platformbuilders/helpers",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Builders helpers library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,18 +18,27 @@
   "private": false,
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.{jsx,ts,tsx,json}\"",
     "uglify": "for f in dist/*.js; do short=${f%.js}; uglifyjs $f > $short.min.js; rm -rf $f; mv $short.min.js $short.js; done",
     "clean": "rm -rf ./node_modules && yarn install",
     "build": "rm -rf ./dist && yarn lint && rollup -c --bundleConfigAsCjs && yarn build:native && yarn uglify",
     "build:native": "node scripts/moveNativeDirectories.js",
-    "prepare": "husky install && yarn build",
+    "prepare": "husky install && jest --coverage && yarn build",
     "precommit": "yarn lint",
     "postversion": "git push && git push --tags",
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major"
+  },
+  "lint-staged": {
+    "src/**/*.ts?(x)": [
+      "yarn pretty",
+      "yarn lint",
+      "yarn test --coverage --findRelatedTests"
+    ]
   },
   "peerDependencies": {
     "lodash": ">=4.17.21",
@@ -37,9 +46,9 @@
     "react": ">=18",
     "react-dom": ">=18",
     "react-native": ">=0.69.3",
+    "react-native-device-info": ">=10.4.0",
     "react-native-haptic": ">=1.0.1",
     "react-native-size-matters": ">=0.3.0",
-    "react-native-device-info": ">=10.4.0",
     "styled-components": ">=5"
   },
   "devDependencies": {
@@ -86,14 +95,17 @@
     "numeral": "2.0.6",
     "prettier": "2.7.1",
     "react-native": "0.70.6",
+    "react-native-device-info": "10.4.0",
     "react-native-haptic": "1.0.1",
     "react-native-size-matters": "0.4.0",
-    "react-native-device-info": "10.4.0",
     "rmfr": "2.0.0",
     "rollup": "3.3.0",
     "rollup-plugin-typescript2": "0.34.1",
     "ts-jest": "29.0.3",
     "typescript": "4.9.3",
     "uglify-js": "3.17.4"
+  },
+  "dependencies": {
+    "lint-staged": "^13.2.2"
   }
 }

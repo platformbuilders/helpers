@@ -47,14 +47,15 @@ import { isIOS } from '@platformbuilders/helpers/native'
 
 ## React/JS
 
-| Name                                               | Returns         | Arguments                      |
-| -------------------------------------------------- | --------------- | ------------------------------ |
-| [`formatToBase64`](./docs/formatToBase64.md)       | string          | (value)                        |
-| [`currencyParser`](./docs/currencyParser.md)       | string          | (value, numberOfDecimalPlaces) |
-| [`parseToThousands`](./docs/parseToThousands.md)   | string          | (value)                        |
-| [`currencyToNumber`](./docs/currencyToNumber.md)   | string          | (value)                        |
-| [`removeWhiteSpaces`](./docs/removeWhiteSpaces.md) | string          | (value)                        |
-| [`toOnlyNumbers`](./docs/toOnlyNumbers.md)         | string          | (value)                        |
+| Name                                               | Returns | Arguments                      |
+| -------------------------------------------------- | ------- | ------------------------------ |
+| [`formatToBase64`](./docs/formatToBase64.md)       | string  | (value)                        |
+| [`currencyParser`](./docs/currencyParser.md)       | string  | (value, numberOfDecimalPlaces) |
+| [`parseToThousands`](./docs/parseToThousands.md)   | string  | (value)                        |
+| [`currencyToNumber`](./docs/currencyToNumber.md)   | string  | (value)                        |
+| [`removeWhiteSpaces`](./docs/removeWhiteSpaces.md) | string  | (value)                        |
+| [`toOnlyNumbers`](./docs/toOnlyNumbers.md)         | string  | (value)                        |
+| [`formatToPhone`](./docs/formatToPhone.md)         | string  | (value)                        |
 
 ## React Native
 
