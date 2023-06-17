@@ -1,4 +1,4 @@
-import { removeWhiteSpaces } from '../shared/removeWhiteSpaces';
+import { removeWhiteSpaces } from '../removeWhiteSpaces';
 
 describe('removeWhiteSpaces tests', () => {
   it('should remove white empty spaces properly', () => {

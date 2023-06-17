@@ -1,4 +1,4 @@
-import { addMaskToCardNumber } from '../shared/addMaskToCardNumber';
+import { addMaskToCardNumber } from '../addMaskToCardNumber';
 
 const expected = '**** **** **** 1234';
 

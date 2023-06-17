@@ -1,4 +1,4 @@
-import { formatToPhone } from '../shared/formatToPhone';
+import { formatToPhone } from '../formatToPhone';
 
 const expected = '(11) 99999-8888';
 

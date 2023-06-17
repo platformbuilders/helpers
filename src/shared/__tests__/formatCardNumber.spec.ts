@@ -1,4 +1,4 @@
-import { formatCardNumber } from '../shared/formatCardNumber';
+import { formatCardNumber } from '../formatCardNumber';
 
 describe('formatCardNumber tests', () => {
   it('should apply mask credit card number 5363 5085 9979 9238', () => {
