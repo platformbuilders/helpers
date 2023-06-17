@@ -1,4 +1,4 @@
-import { isSecureLink, sanitizeValues } from '../shared/sanitizer';
+import { isSecureLink, sanitizeValues } from '../sanitizer';
 
 describe('Sanitizer', () => {
   describe('isSecureLink', () => {

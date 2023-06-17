@@ -1,4 +1,4 @@
-import { formatToMonogram } from '../shared/formatToMonogram';
+import { formatToMonogram } from '../formatToMonogram';
 
 describe('formatToMonogram tests', () => {
   it('should format to monogram', () => {
