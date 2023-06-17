@@ -16,10 +16,12 @@ export const defaultShadowProps = {
   elevation: 3,
 };
 
-export const getShadow = (defaultShadowProps: GetShadowType = {}): string => `
-  shadow-offset: ${defaultShadowProps.xOffset}px ${defaultShadowProps.yOffset}px;
-  shadow-opacity: ${defaultShadowProps.shadowOpacity};
-  shadow-radius: ${defaultShadowProps.shadowRadius}px;
-  shadow-color: ${defaultShadowProps.shadowColor};
-  elevation: ${defaultShadowProps.elevation};
+export const getShadow = (
+  shadowOptions: GetShadowType = defaultShadowProps,
+): string => `
+  shadow-offset: ${shadowOptions.xOffset}px ${shadowOptions.yOffset}px;
+  shadow-opacity: ${shadowOptions.shadowOpacity};
+  shadow-radius: ${shadowOptions.shadowRadius}px;
+  shadow-color: ${shadowOptions.shadowColor};
+  elevation: ${shadowOptions.elevation};
 `;
