@@ -27,17 +27,11 @@ Just add the library to your project and import it!
 
 ```
 yarn add @platformbuilders/helpers
-```
 
-**If using Native helpers:**
-
-```
-yarn add react-native-haptic react-native-size-matters
-```
-
-3. Import:
+2. Import:
 
 ```
+
 import { getTheme } from '@platformbuilders/helpers'
 import { isIOS } from '@platformbuilders/helpers/native'
 
@@ -62,4 +56,4 @@ import { isIOS } from '@platformbuilders/helpers/native'
 | Name                                                | Returns | Arguments          |
 | --------------------------------------------------- | ------- | ------------------ |
 | [`isIOS`](./docs/native/isIOS.md)                   | boolean |                    |
-| [`generateHaptic`](./docs/native/generateHaptic.md) | void    | HapticFeedbackType |
+```
