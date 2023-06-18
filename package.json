@@ -13,7 +13,7 @@
     "builders",
     "helpers"
   ],
-  "author": "Builders <apps@platformbuilders.io>",
+  "author": "Builders <tecnologia@platformbuilders.io>",
   "license": "ISC",
   "private": false,
   "scripts": {
