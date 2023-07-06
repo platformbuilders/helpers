@@ -5,33 +5,9 @@ on:
     types: [published]
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-    name: Publish to npm
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org/'
-      - name: Set NPM Variables
-        run: echo "$PACKAGES_NPMRC" > .npmrc
-        env:
-          PACKAGES_NPMRC: ${{ secrets.PACKAGES_NPMRC }}
-      - name: Install
-        run: yarn install
-      # Publish to npm
-      - name: Publish
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@platformbuilders'
-      # Publish to GitHub Packages
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  call-workflow:
+    uses: platformbuilders/actions-workflows/.github/workflows/publish-lib.yml@main
+    secrets:
+      PACKAGES_NPMRC: ${{ secrets.PACKAGES_NPMRC }}
+      GITHUB_PACKAGES_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
