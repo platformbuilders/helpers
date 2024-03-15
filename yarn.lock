@@ -1961,19 +1961,19 @@
     eslint-plugin-react "^7.32.0"
     eslint-plugin-sonarjs "^0.18.0"
 
-"@platformbuilders/helpers@^0.8.2":
+"@platformbuilders/helpers@0.8.2":
   version "0.8.2"
-  resolved "https://npm.pkg.github.com/download/@platformbuilders/helpers/0.8.2/d9986f1b926f8408ae6b22a4d8724d79878370f7#d9986f1b926f8408ae6b22a4d8724d79878370f7"
+  resolved "https://registry.yarnpkg.com/@platformbuilders/helpers/-/helpers-0.8.2.tgz#d9986f1b926f8408ae6b22a4d8724d79878370f7"
   integrity sha512-wgt1u47aY5CfnNXS/V7rqCMxItWzK/H8sPtN3Lhenanj8lZH1vNttLsi+10ckzKKIPM962DLTGj14XMnQoGkLg==
   dependencies:
     lint-staged "^13.2.2"
 
-"@platformbuilders/theme-toolkit@0.2.0":
-  version "0.2.0"
-  resolved "https://npm.pkg.github.com/download/@platformbuilders/theme-toolkit/0.2.0/0ff57aab4aafd0d5e90f55271cbff79c4a8ee6b3#0ff57aab4aafd0d5e90f55271cbff79c4a8ee6b3"
-  integrity sha512-Nrju5pMSUmo62wltRGuhVZ85OYHSkVhYNyI+ZcgAxTZWuQeKVFgxPjAeoZSO4cMOV6MW246oQ5dTClBOZZk5hQ==
+"@platformbuilders/theme-toolkit@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@platformbuilders/theme-toolkit/-/theme-toolkit-0.3.0.tgz#eff59fd6693e9e59a6d65b304d22dd204cb7793c"
+  integrity sha512-6/Ifts8C1DeQaavmOM5JnZRfFL/qJRdfzKgUeB1B01iDEIiIzpDNGp6bn2oGd5JnDkXpwgnCuuo4K0InoYPnwA==
   dependencies:
-    "@platformbuilders/helpers" "^0.8.2"
+    "@platformbuilders/helpers" "0.8.2"
     lodash "4.17.21"
 
 "@react-native-community/cli-clean@^9.2.1":

@@ -11,7 +11,7 @@ const isIphoneXAbove = () => isIphone && (hasNotch() || hasDynamicIsland());
 
 const getIphoneStatusBar = () => {
   const deviceId = getDeviceId();
-  
+
   // @ts-ignore
   if (!!iphonesStatusbarHeight[deviceId]) {
     // @ts-ignore
