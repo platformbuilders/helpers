@@ -3,3 +3,4 @@ export * from './isIOS';
 export * from './getShadow';
 export * from '../shared';
 export * from './useSpacingsWithSafeArea';
+export * from './iphoneHelper';
