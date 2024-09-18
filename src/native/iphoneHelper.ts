@@ -57,8 +57,8 @@ const iphonesStatusbarHeight = {
   'iPhone15,5': 54, // iPhone 15 Plus
   'iPhone16,1': 54, // iPhone 15 Pro
   'iPhone16,2': 54, // iPhone 15 Pro Max
-  'iPhone17,3': 52, // iPhone 16
-  'iPhone17,4': 52, // iPhone 16 Plus
-  'iPhone17,1': 52, // iPhone 16 Pro
-  'iPhone17,2': 52, // iPhone 16 Pro Max
+  'iPhone17,3': 54, // iPhone 16
+  'iPhone17,4': 54, // iPhone 16 Plus
+  'iPhone17,1': 54, // iPhone 16 Pro
+  'iPhone17,2': 54, // iPhone 16 Pro Max
 };
